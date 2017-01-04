@@ -1,0 +1,20 @@
+.container{
+
+    border: solid black 1px;
+    background-color: blueviolet;
+    display: inline-block;
+    /*width: auto;  */
+
+}
+.row{
+    display: block;
+    /*position: relative;*/
+margin-bottom: -4px;
+}
+.box{
+    height: 45px;
+    width: 45px;
+    border: 1px solid red;
+    display: inline-block;
+margin: 0px;
+}
