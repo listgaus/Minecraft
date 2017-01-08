@@ -84,20 +84,8 @@ Minecraft.start = function () {
         }
     }
 
-
-//now wana use the selected brick, make selected brick a namespace?
-
-// Minecraft.copyPaste = function(e){
-
-// //want to select the tool with the id of the string, not just the string, previously wrapped it with a dollar sign, so it is already a jquery object 
-// Minecraft.selectedTool.css("background-color","black");
-// Minecraft.selectedTool = "";
-
-// }
-
 // $(."selected").removeClass("selected");
 // $(this).addClass("selected");
-
 
 }
 
@@ -118,12 +106,12 @@ Minecraft.clickedTool = function () {
     }
 }
 
-
+// this is our critical function - it determines wheter its time to paste a mine box or to copy it, and clear its box accordingly
 Minecraft.pickedDiv = function () {
 
     if ((Minecraft.selectedTool === "") && (Minecraft.divPaste !== "") && $(this).has("background-color", "skyblue")) {
         Minecraft.selectedDiv = $(this);
-//this if term is for the paste parts, checking that -i have a selected tool,the background image is empty and paste memory isnt.
+
         if (Minecraft.selectedDiv.is(".cloud") || Minecraft.selectedDiv.is(".leaf") || Minecraft.selectedDiv.is(".rock") || Minecraft.selectedDiv.is(".tree") || Minecraft.selectedDiv.is(".dirt") || Minecraft.selectedDiv.is(".grass")) {
             return;
         }
@@ -184,16 +172,16 @@ Minecraft.pickedDiv = function () {
             $("#selectedBrick").removeClass();
             $("#selectedBrick").addClass("grass");
         }
-        //
-        // else  {
-        //
-        //     Minecraft.selectedTool.addClass("wrong");
-        //     setTimeout(function () {
-        //         Minecraft.selectedTool.removeClass("wrong");
-        //         // Minecraft.selectedTool.addClass("clicked");
-        //     }, 200);
-        //
-        // }
+    
+         else  {
+
+            Minecraft.selectedTool.addClass("wrong");
+            setTimeout(function () {
+                Minecraft.selectedTool.removeClass("wrong");
+                // Minecraft.selectedTool.addClass("clicked");
+            }, 200);
+
+        }
 
     }
 }
