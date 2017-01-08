@@ -1,20 +1,174 @@
-.container{
+body{
+	margin: 0;
+}
+
+.container {
 
     border: solid black 1px;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     display: inline-block;
     /*width: auto;  */
 
 }
-.row{
+
+.clicked{
+	background-color: blue;
+}
+
+.wrong{
+    background-color: red;
+}
+
+#selectedBrick.clicked{
+    border: 1px solid greenyellow;
+}
+
+.box:hover{
+    border: solid 1px greenyellow;
+}
+
+.toolBox {
+    height: 950px;
+    width: 150px;
+    margin-left: 15px;
+    background: black;
+    display: inline-block;
+}
+
+.row {
     display: block;
     /*position: relative;*/
-margin-bottom: -4px;
+    margin-bottom: -4px;
 }
-.box{
+
+.box {
     height: 45px;
     width: 45px;
-    border: 1px solid red;
+    border: 1px solid transparent;
     display: inline-block;
-margin: 0px;
+    margin: 0px;
+    background-size: cover;
+}
+
+/* background images classes start here*/
+
+.grass {
+    background-image: url("./images/grass.png");
+}
+
+.leaf {
+    background-image: url("./images/leaf.png");
+}
+
+.tree {
+    background-image: url("./images/tree.png");
+}
+
+.rock {
+    background-image: url("./images/rock.png");
+}
+
+.dirt {
+    background-image: url("./images/dirt.png");
+}
+
+.sky{
+	background-color: skyblue; 
+}
+
+.cloud{
+	background-color: white; 
+}
+
+/* tool box classes*/
+
+.tool {
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    vertical-align: middle;
+}
+
+#axe {
+    background-image: url("./images/axe.png");
+    background-size: cover;
+}
+
+#axe:hover,#shovel:hover,#pickaxe:hover{
+    background-color: deepskyblue;
+}
+
+#shovel {
+    background-image: url("./images/shovel.png");
+    background-size: cover;
+}
+
+#pickaxe {
+    background-image: url("./images/pickaxe.png");
+    background-size: cover;
+}
+
+#start{
+	margin-top: 300px;
+	margin-left: 500px;
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#89c48d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #89c48d, #65a9d7);
+   background: -moz-linear-gradient(top, #89c48d, #65a9d7);
+   background: -ms-linear-gradient(top, #89c48d, #65a9d7);
+   background: -o-linear-gradient(top, #89c48d, #65a9d7);
+   padding: 20px 40px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 24px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#start:hover {
+   border-top-color: #9bdb97;
+   background: #9bdb97;
+   color: #eefc80;
+   }
+#start:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+#words{
+	color: white;
+	font-size: 40px;
+	font-family: cursive;
+	z-index: 1;
+	text-align: center;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#landingPage{
+	background-image: url("https://minecraft.net/static/pages/img/minecraft-hero.df1112867f04.jpg");
+	background-size: cover;
+	background-color: blue;
+	background-position: center;
+	height: 600px;
+	width: 100%;
+	margin: 0;
+}
+
+#selectedBrick {
+    border: solid 1px cornsilk;
+    height: 80px;
+    width: 80px;
+    margin: 30px;
+    background-size: cover;
+}
+
+#selectedBrick:hover{
+    border: solid 1px greenyellow ;
 }
